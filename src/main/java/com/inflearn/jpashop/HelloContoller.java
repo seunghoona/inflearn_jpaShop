@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class HelloContoller {
 
+    MemberService memberService;
+    public HelloContoller(MemberService memberService) {
+        this.memberService = memberService;
+    }
+
     @GetMapping(value = "hello")
     public String hello(Model model){
 

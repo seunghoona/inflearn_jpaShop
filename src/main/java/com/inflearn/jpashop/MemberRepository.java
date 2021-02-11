@@ -24,4 +24,16 @@ public class MemberRepository {
         return em.find(Member.class, id);
     }
 
+    public Long findMemberId(String userId){
+
+        Long findUserId = em.createQuery("SELECT m.id FROM Member  m where  m.userId=:userId", Long.class)
+                .setParameter("userId", userId).getSingleResult();
+
+        return findUserId;
+    }
+
+
+
+
+
 }

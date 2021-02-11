@@ -1,23 +1,15 @@
-package com.inflearn.jpashop;
+package com.inflearn.jpashop.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.inflearn.jpashop.MemberType;
 
-import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
-@Getter
-@Setter
-public class Member {
+public class MemberDTO {
 
-    @Id
-    @GeneratedValue
     private Long id;
 
-    @Enumerated
     private MemberType memberType;
 
     private String username;
@@ -25,8 +17,5 @@ public class Member {
     private String userId;
 
     private String userPw;
-
-
-
 
 }
